@@ -1,11 +1,39 @@
 ﻿using System;
+using System.Runtime.ConstrainedExecution;
 
 namespace CarLotSimulator
 {
     class Program
     {
         static void Main(string[] args)
+
+
         {
+            Car car1 = new Car();
+            car1.Make = "Pontiac";
+            car1.Model = "G6";
+            car1.Year = "2007";
+            car1.IsDrivable = "yes";
+            car1.EngineNoise = "beep";
+            Car Car2 = new Car() { Make = "bmw", Model = "5", Year = "2022", IsDrivable = "yes", EngineNoise = "bang" };
+            Car Car3 = new Car() { Make = "volvo", Model = "volvo 9", Year = "2024", IsDrivable = "yes", EngineNoise = "boom" };
+
+            Console.WriteLine($"The maker of the car is {car1.Make}");
+            Console.WriteLine($"The model of the car is {car1.Model}");
+            Console.WriteLine($"The  year  of the car is {car1.Year}");
+
+            Console.WriteLine("-----------------------------------------");
+
+            Console.WriteLine(Car2.Make);
+            Console.WriteLine(Car2.Model);
+            Console.WriteLine(Car2.Year);
+
+            Console.WriteLine("-----------------------------------------");
+
+            car1.CarHOnk();
+            Car2.CarHOnk();
+            Car3.CarHOnk();
+
             //TODO
 
             //Create a seperate class file called Car
